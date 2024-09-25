@@ -1,0 +1,175 @@
+/*************************************
+    Challenge 5-1
+*************************************/
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    filter: opacity(80%);
+    border-radius: 20px; 
+}
+
+/*************************************
+    Challenge 5-2
+*************************************/
+
+#footer {
+    text-align: center;
+    font-weight: bold;
+}
+
+/*************************************
+    Challenge 5-3
+*************************************/
+
+.table {
+    margin: 5px;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 4px;
+}
+
+th {
+    background-color: chocolate;
+}
+
+/*************************************
+    Challenge 5-4 & 5-10
+*************************************/
+.container {
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*************************************
+    Challenge 5-5
+*************************************/
+
+.navbar {
+    overflow: hidden;
+    background-color: #201b1b;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+  
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: chocolate;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+/*************************************
+    Challenge 5-6
+*************************************/
+.column {
+    float: left;
+    width: 50%;
+    color: chocolate;
+    height: 250px;
+    width: 50%;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*************************************
+    Challenge 5-7
+*************************************/
+
+.column p:hover {
+    color: black;
+}
+
+/*************************************
+    Challenge 5-8
+*************************************/
+
+.img-container {
+    position: relative;
+    width: 20%;
+ }
+  
+.image {
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+.img-container:hover .image {
+    opacity: 0.3;
+}
+  
+.img-container:hover .middle {
+    opacity: 1;
+}
+  
+.text {
+    background-color: chocolate;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+/*************************************
+    Challenge 5-9
+*************************************/
+
+video {
+    width: 50%;
+}
+
+/*************************************
+    Challenge 5-11
+*************************************/
+
+@media screen and (max-width: 600px) {
+    p {
+        color: blue;
+    }
+}
