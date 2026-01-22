@@ -4,6 +4,7 @@
 		<title>McLaren F1 FanPage</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="./css/one_page_website.css">
+		<script src="JS/one_page_website.js"></script>
 	</head>
 	<body>
 		
@@ -34,74 +35,97 @@
 		<section>
 			<div id="gallery">
 				<h1>Gallery</h1>
-				<div>
-					
-				<!-- PHOTO-CONTAINER 1 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_1.jpeg" alt="2024 Car Unveiling">
-						<div>
-							<h3>Click to Enlarge</h3>
-						</div>
+				<!-- Images used to open the lightbox -->
+				<div class="row">
+					<div class="column">
+						<img src="./images/thumb/thumbnail_1.jpeg" alt="2024 Car Unveiling" onclick="openModal();currentSlide(1)" class="hover-shadow">
+					</div>
+					<div class="column">
+						<img src="./images/thumb/thumbnail_2.jpeg" alt="2024 car on track" onclick="openModal();currentSlide(2)" class="hover-shadow">
+					</div>
+					<div class="column">
+						<img src="./images/thumb/thumbnail_3.jpeg" alt="McLaren drivers Oscar and Lando" onclick="openModal();currentSlide(3)" class="hover-shadow">
+					</div>
+					<div class="column">
+						<img src="./images/thumb/thumbnail_4.jpeg" alt="McLaren driver Lando Norris" onclick="openModal();currentSlide(4)" class="hover-shadow">
+					</div>
+					<div class="column">
+						<img src="./images/thumb/thumbnail_5.jpeg" alt="McLaren Driver Oscar Piastri" onclick="openModal();currentSlide(5)" class="hover-shadow">
+					</div>
+					<div class="column">
+						<img src="./images/thumb/thumbnail_6.jpeg" alt="Lego McLaren f1 set" onclick="openModal();currentSlide(6)" class="hover-shadow">
 					</div>
 				</div>
-				<!-- END PHOTO-CONTAINER 1 
-					
-				<!-- PHOTO-CONTAINER 2 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_2.jpeg" alt="2024 car on track">
-						<div>
-							<h3>Click to Enlarge</h3>
+
+				<!-- The Modal/Lightbox -->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+
+						<div class="mySlides">
+						<div class="numbertext">1 / 6</div>
+						<img src="./images/demo/thumbnail_1.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+						<div class="numbertext">2 / 6</div>
+						<img src="./images/thumb/thumbnail_2.jpeg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+						<div class="numbertext">3 / 6</div>
+						<img src="./images/thumb/thumbnail_3.jpeg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+						<div class="numbertext">4 / 6</div>
+						<img src="./images/thumb/thumbnail_4.jpeg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+						<div class="numbertext">5 / 6</div>
+						<img src="./images/thumb/thumbnail_5.jpeg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+						<div class="numbertext">6 / 6</div>
+						<img src="./images/thumb/thumbnail_6.jpeg" style="width:100%">
+						</div>
+
+						<!-- Next/previous controls -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						<!-- Caption text -->
+						<div class="caption-container">
+						<p id="caption"></p>
+						</div>
+
+						<!-- Thumbnail image controls -->
+						<div class="column">
+						<img class="demo" src="./images/demo/thumbnail_1.jpg" onclick="currentSlide(1)" alt="2024 Car Unveiling">
+						</div>
+
+						<div class="column">
+						<img class="demo" src="./images/demo/thumbnail_2.jpg" onclick="currentSlide(2)" alt="2024 car on track">
+						</div>
+
+						<div class="column">
+						<img class="demo" src="./images/demo/thumbnail_3.jpg" onclick="currentSlide(3)" alt="McLaren drivers Oscar and Lando">
+						</div>
+
+						<div class="column">
+						<img class="demo" src="./images/demo/thumbnail_4.jpg" onclick="currentSlide(4)" alt="McLaren driver Lando Norris">
+						</div>
+
+						<div class="column">
+						<img class="demo" src="./images/demo/thumbnail_5.jpg" onclick="currentSlide(4)" alt="McLaren Driver Oscar Piastri">
+						</div>
+
+						<div class="column">
+						<img class="demo" src="./images/demo/thumbnail_6.jpg" onclick="currentSlide(4)" alt="Lego McLaren f1 set">
 						</div>
 					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 2 -->
-					
-				<!-- PHOTO-CONTAINER 3 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_3.jpeg" alt="McLaren drivers Oscar and Lando">
-						<div>
-							<h3>Click to Enlarge</h3>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 3 -->
-					
-				<!-- PHOTO-CONTAINER 4 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_4.jpeg" alt="McLaren driver Lando Norris">
-						<div>
-							<h3>Click to Enlarge</h3>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 4 -->
-					
-				<!-- PHOTO-CONTAINER 5 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_5.jpeg" alt="McLaren Driver Oscar Piastri">
-						<div>
-							<h3>Click to Enlarge</h3>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 5 -->
-					
-				<!-- PHOTO-CONTAINER 6 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_6.jpeg" alt="Lego McLaren f1 set">
-						<div>
-							<h3>Click to Enlarge</h3>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 6 -->
-					
 				</div>
 			</div>
 		</section>
